@@ -1,0 +1,84 @@
+.faq {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 6vw;
+}
+
+.faq-foto {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 4 / 3;
+  margin-top: 24px;
+  border: 1px solid var(--garis);
+  border-radius: 18px;
+  background-color: #0e1630;
+  background-size: cover;
+  background-position: center;
+}
+
+.faq-lanjut {
+  margin-top: 14px;
+  font-size: 16px;
+  color: var(--redup);
+}
+
+.faq-lanjut a {
+  color: var(--warna-utama);
+  font-weight: 600;
+}
+
+.faq-daftar {
+  display: grid;
+  gap: 10px;
+}
+
+.faq-item {
+  background: var(--permukaan);
+  border: 1px solid var(--garis);
+  border-radius: 14px;
+}
+
+.faq-item.buka {
+  border-color: var(--warna-utama);
+}
+
+.faq-tanya {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  color: var(--teks);
+  cursor: pointer;
+}
+
+.faq-tanya svg {
+  flex-shrink: 0;
+  color: var(--warna-utama);
+}
+
+.faq-jawab {
+  padding: 0 20px 18px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--redup);
+}
+
+@media (max-width: 800px) {
+  .faq {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 40px 6vw;
+  }
+}

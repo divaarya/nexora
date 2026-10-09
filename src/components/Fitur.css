@@ -1,0 +1,158 @@
+.fitur {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 6vw;
+}
+
+.fitur .judul {
+  margin-bottom: 28px;
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.kartu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px;
+  background: var(--permukaan);
+  border: 1px solid var(--garis);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.kartu:hover {
+  border-color: var(--warna-utama);
+}
+
+.k-absen {
+  grid-column: span 4;
+}
+
+.k-gaji,
+.k-exam,
+.k-library,
+.k-izin {
+  grid-column: span 2;
+}
+
+.k-ikon {
+  color: var(--warna-utama);
+  margin-bottom: 12px;
+}
+
+.kartu h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.kartu p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--redup);
+  max-width: 380px;
+}
+
+.viz-bar,
+.viz-rak {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 90px;
+}
+
+.viz-bar i {
+  flex: 1;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(var(--warna-utama), var(--warna-aksen));
+}
+
+.viz-rak i {
+  flex: 1;
+  border-radius: 4px 4px 0 0;
+  background: var(--warna-aksen);
+  opacity: 0.8;
+}
+
+.viz-rak i:nth-child(2n) {
+  background: var(--warna-utama);
+}
+
+.viz-angka {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.viz-angka small {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--redup);
+}
+
+.viz-meter {
+  position: relative;
+  height: 10px;
+  margin-bottom: 22px;
+  background: var(--garis);
+  border-radius: 99px;
+}
+
+.viz-meter i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--warna-utama), var(--warna-aksen));
+}
+
+.viz-meter span {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  font-size: 14px;
+  color: var(--redup);
+}
+
+.viz-chip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.viz-chip b {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 99px;
+  background: var(--garis);
+  color: var(--redup);
+}
+
+.viz-chip .ok {
+  background: rgba(34, 211, 238, 0.15);
+  color: var(--warna-utama);
+}
+
+@media (max-width: 800px) {
+  .fitur {
+    padding: 40px 6vw;
+  }
+
+  .bento {
+    grid-template-columns: 1fr;
+  }
+
+  .k-absen,
+  .k-gaji,
+  .k-exam,
+  .k-library,
+  .k-izin {
+    grid-column: span 1;
+  }
+}

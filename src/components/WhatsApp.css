@@ -1,0 +1,19 @@
+.wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 200;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #06101f;
+  background: linear-gradient(135deg, var(--warna-utama), var(--warna-aksen));
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.45);
+}
+
+.wa:hover {
+  transform: scale(1.06);
+}
