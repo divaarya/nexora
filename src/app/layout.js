@@ -9,19 +9,46 @@ const sora = Sora({
 
 export async function generateMetadata() {
   const site = await getSite();
+
+  const title = site.seo.metaTitle || "Nexora - Smart Business Platform";
+  const description =
+    site.seo.metaDescription ||
+    "Nexora membantu bisnis mengelola pekerjaan dan meningkatkan produktivitas melalui solusi digital yang modern.";
+
   return {
-    title: site.seo.metaTitle,
-    description: site.seo.metaDescription,
+    metadataBase: new URL("https://nexora-vert-five-87.vercel.app"),
+
+    title,
+    description,
+
     openGraph: {
-      title: site.seo.metaTitle,
-      description: site.seo.metaDescription,
-      images: site.seo.ogImage ? [site.seo.ogImage] : [],
+      title,
+      description,
+      siteName: "Nexora",
+      locale: "id_ID",
+      type: "website",
+      images: [
+        {
+          url: "/opengraph-image.png",
+          width: 1200,
+          height: 630,
+          alt: "Nexora - Smart Business Platform",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/opengraph-image.png"],
     },
   };
 }
 
 export default async function RootLayout({ children }) {
   const site = await getSite();
+
   return (
     <html lang="id">
       <body
